@@ -73,7 +73,7 @@ def solved(file, name):
             for i in range(0,len(key)):
                 mesg = decrypt(open(file,'rb').read(), ''.join(''.join(rotate(list(key), i)).split('\n')))
                 if '* Hello, '+name in mesg:#This line is known to the hacker
-                    print 'key = '+key
+                    print 'key = '+''.join(''.join(rotate(list(key), i)).split('\n'))
                     print mesg
 
 def main(file, name):
